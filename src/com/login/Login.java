@@ -17,17 +17,16 @@ public class Login extends HttpServlet {
 		String uname= request.getParameter("uname");
 		String pass= request.getParameter("pass");
 		if (uname.equals("akanksha")&& pass.equals("HeyRam"))
-		{
-			HttpSession session = request.getSession();
-			session.setAttribute("username", uname);
-			
-			response.sendRedirect("welcome.jsp");
-		}
-		
-		else
-		{
-			response.sendRedirect("login.jsp");
-		}
+			{
+				HttpSession session = request.getSession();
+				session.setAttribute("username", uname);
+				
+				response.sendRedirect("welcome.jsp");
+			}
+			else
+			{
+				response.sendRedirect("login.jsp");
+			}
 		
 	}
 
